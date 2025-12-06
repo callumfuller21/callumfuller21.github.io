@@ -2,17 +2,56 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <title>YouTube Embed - Minimal</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Callum Fuller's Application 6</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      line-height: 1.6;
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+    p.description {
+      text-align: center;
+      font-size: 1.1rem;
+      color: #444;
+      margin-bottom: 30px;
+    }
+    .video-wrapper {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+  </style>
 </head>
+
 <body>
-  <iframe
-    width="560"
-    height="315"
-    src="https://www.youtube.com/embed/v6DHGLziFfY"
-    title="A6 RTS2025"
-    frameborder="0"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-    allowfullscreen>
-  </iframe>
+
+  <!-- Page Title -->
+  <h1>Description:</h1>
+
+  <!-- Short Description -->
+  <p class="description">
+    This project involves creating a real time system for an animatronic that is supposed to track the movement of guests in the theme park within 20 meters of it. The animatronic should also allow for nearby cast memebers to remotely trigger the movement of the left and right arms.
+    The video below is a demonstration of this project.
+  </p>
+
+  <!-- YouTube Video -->
+  <div class="video-wrapper">
+    <iframe
+      width="560"
+      height="315"
+      src="https://www.youtube.com/embed/v6DHGLziFfY"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen>
+    </iframe>
+  </div>
+
 </body>
 </html>
