@@ -1,72 +1,239 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>CFuller Application 6</title>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      background: #c7ffe8;
-      font-family: "Segoe UI", Arial, sans-serif;
-      display: flex;
-      justify-content: center;
-      padding: 40px 20px;
-    }
-    .container{
-      background: white;
-      width: 100%;
-      max-width: 850px;
-      padding: 30px;
-      border-radius: 12px;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-    }
-    h1 {
-      text-align: center;
-      font-size: 2.2rem;
-      margin-bottom: 10px;
-      color: #222
-    }
-    p.description {
-      text-align: center;
-      font-size: 1.5rem;
-      color: #555;
-      margin-bottom: 30px;
-    }
-    .video-wrapper {
-      position: relative;
-      width: 100%;
-      padding-bottom: 56.25%;
-      height:0 ;
-      border-radius: 10px;
-      overflow: hidden;
-      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12);
-    }
-    .video-wrapper iframe{
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      border: none;
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Callum Fuller | Engineering Portfolio</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family: "Segoe UI", Arial, sans-serif;
+    background:#f5f7fa;
+    color:#333;
+    line-height:1.6;
+}
+
+header{
+    background:#0f172a;
+    color:white;
+    padding:60px 20px;
+    text-align:center;
+}
+
+header h1{
+    font-size:3rem;
+    margin-bottom:10px;
+}
+
+header p{
+    font-size:1.2rem;
+    color:#cbd5e1;
+}
+
+.container{
+    max-width:1100px;
+    margin:auto;
+    padding:40px 20px;
+}
+
+section{
+    margin-bottom:60px;
+}
+
+h2{
+    margin-bottom:20px;
+    color:#0f172a;
+    border-bottom:3px solid #38bdf8;
+    display:inline-block;
+    padding-bottom:5px;
+}
+
+.about{
+    background:white;
+    padding:25px;
+    border-radius:12px;
+    box-shadow:0 4px 15px rgba(0,0,0,0.08);
+}
+
+.project-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(450px,1fr));
+    gap:25px;
+}
+
+.project-card{
+    background:white;
+    border-radius:12px;
+    overflow:hidden;
+    box-shadow:0 4px 15px rgba(0,0,0,0.08);
+    transition:transform 0.2s ease;
+}
+
+.project-card:hover{
+    transform:translateY(-5px);
+}
+
+.project-content{
+    padding:20px;
+}
+
+.project-content h3{
+    margin-bottom:10px;
+}
+
+.video-wrapper{
+    position:relative;
+    width:100%;
+    padding-bottom:56.25%;
+}
+
+.video-wrapper iframe{
+    position:absolute;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    border:none;
+}
+
+.skills{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+}
+
+.skill{
+    background:#0ea5e9;
+    color:white;
+    padding:8px 15px;
+    border-radius:20px;
+    font-size:0.95rem;
+}
+
+footer{
+    text-align:center;
+    padding:30px;
+    background:#0f172a;
+    color:white;
+}
+
+footer a{
+    color:#38bdf8;
+    text-decoration:none;
+}
+
+footer a:hover{
+    text-decoration:underline;
+}
+</style>
 </head>
+
 <body>
-  <div class="container">
-    <h1>RTS Application 6 Fall 2025:</h1>
-    <p class="description">
-      This project involves creating a real time system for an animatronic that is supposed to track the movement of guests in the theme park within 20 meters of it. The animatronic should also allow for nearby cast memebers to remotely trigger the movement of the left and right arms.
-      The video below is a demonstration of this project.
+
+<header>
+    <h1>Callum Fuller</h1>
+    <p>Electrical Engineering Student | Embedded Systems | Real-Time Systems</p>
+</header>
+
+<div class="container">
+
+    <section>
+        <h2>About Me</h2>
+
+        <div class="about">
+            <p>
+                I am an Electrical Engineering student with experience in
+                embedded systems, real-time operating systems, circuit design,
+                control systems, and hardware prototyping. This portfolio
+                highlights selected engineering projects demonstrating both
+                software and hardware development skills.
+            </p>
+        </div>
+    </section>
+
+    <section>
+        <h2>Featured Projects</h2>
+
+        <div class="project-grid">
+
+            <!-- Project 1 -->
+            <div class="project-card">
+                <div class="video-wrapper">
+                    <iframe
+                        src="https://www.youtube.com/embed/ynXIehDLuzQ?si=pOuwwbG631MyFHwG"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+
+                <div class="project-content">
+                    <h3>Color Rage Bot</h3>
+                    <p>
+                        Autonomous robot designed to detect specific shades of green and gold
+                        within a 360 degree field-of-view and bump into the objects. Developed using
+                        ROS concepts, color-detection, embedded systems, Arduino, C, and sensor integration.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="project-card">
+                <div class="video-wrapper">
+                    <iframe
+                        src="https://www.youtube.com/embed/ZdDSdmR4mSU?si=O3ve-Jhzg5l3IHyE"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+
+                <div class="project-content">
+                    <h3>Portable Unitary Throwable Target Interceptor (P.U.T.T.I)</h3>
+                    <p>
+                        The P.U.T.T.I is a portable device that detects objects within a range of 5 feet or
+                        greater in front of the device developed as part of the ECE department at
+                        the University of Central Florida as part of Senior Design. A laser and buzzer will
+                        be activated to provide a visual and audible notification for users of the device.
+                        The device utilizes both YOLO detection through the camera as well as measurements
+                        achieved through the radar modules to accurately detect the objects, ensuring that the
+                        device does not target people or other objects.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section>
+        <h2>Technical Skills</h2>
+
+        <div class="skills">
+            <span class="skill">C</span>
+            <span class="skill">Python</span>
+            <span class="skill">MATLAB</span>
+            <span class="skill">Embedded Systems</span>
+            <span class="skill">RTOS</span>
+            <span class="skill">ROS</span>
+            <span class="skill">PCB Design</span>
+            <span class="skill">LTspice</span>
+            <span class="skill">Arduino</span>
+            <span class="skill">ESP32</span>
+            <span class="skill">Digital Logic</span>
+            <span class="skill">Control Systems</span>
+        </div>
+    </section>
+
+</div>
+
+<footer>
+    <p>
+        Email: callum.fuller@bseuk.com |
+        LinkedIn: www.linkedin.com/in/callum-fuller-292986250 |
     </p>
-    <div class="video-wrapper">
-      <iframe
-        src="https://www.youtube.com/embed/v6DHGLziFfY"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen>
-      </iframe>
-    </div>
-  </div>
+</footer>
+
 </body>
 </html>
